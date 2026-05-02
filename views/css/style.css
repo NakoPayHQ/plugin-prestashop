@@ -1,0 +1,22 @@
+.nakopay-checkout { max-width: 480px; margin: 1rem auto; font-family: inherit; }
+.nakopay-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; background: #fff; }
+.nakopay-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; }
+.nakopay-header h2 { margin:0; font-size:18px; }
+.nakopay-invoice-id { color:#6b7280; font-size:12px; font-family:monospace; }
+.nakopay-amount { text-align:center; margin:12px 0; }
+.nakopay-amount-fiat { font-size:22px; font-weight:600; }
+.nakopay-amount-crypto { color:#6b7280; font-size:14px; margin-top:4px; }
+.nakopay-qr { display:flex; justify-content:center; margin:16px 0; }
+.nakopay-qr canvas { background:#fff; padding:8px; border:1px solid #e5e7eb; border-radius:8px; }
+.nakopay-row { margin:12px 0; }
+.nakopay-row label { display:block; font-size:12px; color:#6b7280; margin-bottom:4px; }
+.nakopay-input-row { display:flex; gap:6px; }
+.nakopay-input-row input { flex:1; padding:8px; font-family:monospace; font-size:12px; border:1px solid #d1d5db; border-radius:6px; }
+.nakopay-copy-btn { padding:6px 12px; background:#f3f4f6; border:1px solid #d1d5db; border-radius:6px; cursor:pointer; }
+.nakopay-wallet-btn { display:block; padding:10px; text-align:center; background:#111827; color:#fff !important; text-decoration:none; border-radius:8px; }
+.nakopay-status { text-align:center; margin-top:14px; padding:8px; border-radius:6px; background:#f9fafb; font-size:14px; }
+.nakopay-status[data-status="paid"], .nakopay-status[data-status="completed"] { background:#d1fae5; color:#065f46; }
+.nakopay-status[data-status="expired"], .nakopay-status[data-status="cancelled"] { background:#fee2e2; color:#991b1b; }
+.nakopay-error { max-width:480px; margin:1rem auto; padding:16px; border:1px solid #fecaca; background:#fef2f2; color:#991b1b; border-radius:8px; }
+.nakopay-payment-option { padding:8px 0; color:#374151; font-size:13px; }
+.nakopay-confirmation { padding:16px; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; }
