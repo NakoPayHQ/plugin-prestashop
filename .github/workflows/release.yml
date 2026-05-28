@@ -1,0 +1,33 @@
+name: Release plugin-prestashop
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No internal URLs
+        run: bash ./scripts/check-no-internal-urls.sh ./
+      - name: Stage module as 'nakopay/'
+        run: |
+          rm -rf build
+          mkdir -p build/nakopay
+          cp -R ./. build/nakopay/
+          rm -rf build/nakopay/build build/nakopay/.git build/nakopay/.github \
+                 build/nakopay/node_modules build/nakopay/vendor
+      - name: Build zip
+        run: |
+          cd build
+          zip -r ../nakopay.zip nakopay
+      - name: GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: nakopay.zip
+          generate_release_notes: true
+          name: PrestaShop ${{ github.ref_name }}
